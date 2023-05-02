@@ -1,6 +1,6 @@
 import Auth from "../Auth"
+import Logout from "../Logout"
 import { createServerComponentSupabaseClient } from '@supabase/auth-helpers-nextjs'
-import { redirect } from "next/navigation";
 import { headers, cookies } from 'next/headers'
 
 export default async function Admin() {
@@ -9,9 +9,9 @@ export default async function Admin() {
         cookies,
     })
     const { data: userData } = await supabase.auth.getSession();
-    console.log("veri =>", userData.session.user.user_metadata)
+    //console.log("veri =>", userData.session.user.user_metadata)
     if (userData.session) {
-        return redirect("/")
+        return (<Logout session={userData.session} />)
     }
     return (<Auth />)
 }
