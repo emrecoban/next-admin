@@ -8,9 +8,9 @@ export default async function Admin() {
         headers,
         cookies,
     })
-    const { userData } = await supabase.auth.getSession();
-
-    if (data.session) {
+    const { data: userData } = await supabase.auth.getSession();
+    console.log("veri =>", userData.session.user.user_metadata)
+    if (userData.session) {
         return redirect("/")
     }
     return (<Auth />)
