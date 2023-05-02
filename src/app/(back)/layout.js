@@ -1,4 +1,4 @@
-import '../globals-front.css'
+import '../globals-back.css'
 import SupabaseProvider from './supabase-provider'
 
 export const metadata = {
