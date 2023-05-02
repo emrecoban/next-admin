@@ -1,16 +1,17 @@
-'use client'
+import Auth from "../Auth"
+import { createServerComponentSupabaseClient } from '@supabase/auth-helpers-nextjs'
+import { redirect } from "next/navigation";
+import { headers, cookies } from 'next/headers'
 
-import { useSupabase } from "../supabase-provider"
+export default async function Admin() {
+    const supabase = createServerComponentSupabaseClient({
+        headers,
+        cookies,
+    })
+    const { userData } = await supabase.auth.getSession();
 
-export default function Admin() {
-    const { supabase } = useSupabase()
-    return (
-        <div className="h-screen flex justify-center items-center">
-            <button className="bg-black text-white px-8 py-3 rounded-md hover:drop-shadow-2xl" onClick={() => supabase.auth.signInWithOAuth({
-                provider: "github"
-            })}>
-                Login with GitHub
-            </button>
-        </div>
-    )
+    if (data.session) {
+        return redirect("/")
+    }
+    return (<Auth />)
 }
