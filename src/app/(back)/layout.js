@@ -1,4 +1,6 @@
+import '../globals-front.css'
 import SupabaseProvider from './supabase-provider'
+
 export const metadata = {
   title: 'Next Admin',
   description: 'Admin Dashboard',

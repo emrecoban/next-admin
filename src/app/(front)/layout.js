@@ -1,4 +1,4 @@
-import '../globals.css'
+import '../globals-front.css'
 
 export const metadata = {
   title: 'Next App with Dashboard',
