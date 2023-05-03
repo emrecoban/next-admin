@@ -1,6 +1,6 @@
 'use client'
 
-import { useSupabase } from "./supabase-provider"
+import { useSupabase } from "../supabase-provider"
 import Image from "next/image"
 
 export default function Logout({ session }) {

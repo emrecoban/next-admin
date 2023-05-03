@@ -1,8 +1,8 @@
 'use client'
 
-import { useSupabase } from "./supabase-provider"
+import { useSupabase } from "../supabase-provider"
 
-export default function Auth() {
+export default function LoginPage() {
     const { supabase } = useSupabase()
     return (
         <div className="h-screen flex justify-center items-center">

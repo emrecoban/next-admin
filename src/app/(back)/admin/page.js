@@ -1,5 +1,5 @@
-import Auth from "../Auth"
-import Logout from "../Logout"
+import LoginPage from "./LoginPage"
+import Dashboard from "./Dashboard"
 import { createServerComponentSupabaseClient } from '@supabase/auth-helpers-nextjs'
 import { headers, cookies } from 'next/headers'
 
@@ -11,7 +11,7 @@ export default async function Admin() {
     const { data: userData } = await supabase.auth.getSession();
     //console.log("veri =>", userData.session.user.user_metadata)
     if (userData.session) {
-        return (<Logout session={userData.session} />)
+        return (<Dashboard session={userData.session} />)
     }
-    return (<Auth />)
+    return (<LoginPage />)
 }
