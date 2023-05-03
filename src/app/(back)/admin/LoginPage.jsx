@@ -1,6 +1,6 @@
 'use client'
 
-import { useSupabase } from "../supabase-provider"
+import { useSupabase } from "../provider/supabase"
 
 export default function LoginPage() {
     const { supabase } = useSupabase()

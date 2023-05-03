@@ -1,5 +1,5 @@
 import '../globals-back.css'
-import SupabaseProvider from './supabase-provider'
+import SupabaseProvider from './provider/supabase'
 
 export const metadata = {
   title: 'Next Admin',
