@@ -1,3 +1,4 @@
+import Visualizer from "next-route-visualizer"
 export default function Home() {
-  return <h1>Selam Hey</h1>
+  return <Visualizer displayColocating />
 }
