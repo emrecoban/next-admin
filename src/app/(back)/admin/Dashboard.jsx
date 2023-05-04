@@ -6,6 +6,7 @@ import Image from "next/image"
 export default function Logout({ session }) {
     const { supabase } = useSupabase()
     console.log("gelen veri => ", session)
+    //commit 2 May 4
     return (
         <div className="h-screen flex flex-col gap-y-5 justify-center items-center">
             <Image src={session.user.user_metadata.avatar_url} width="100" height="100" alt="avatar" />
