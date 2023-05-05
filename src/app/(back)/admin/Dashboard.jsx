@@ -41,7 +41,7 @@ export default function Logout({ session }) {
                                         <path d="M3.196 8.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 8.87z" />
                                         <path d="M10.38 1.103a.75.75 0 00-.76 0l-7.25 4.25a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.76 0l7.25-4.25a.75.75 0 000-1.294l-7.25-4.25z" />
                                     </svg>
-                                    <span>NextAdmin</span>
+                                    <span>NextCongress</span>
                                 </a>
                                 {/* END Logo */}
                             </div>
@@ -237,7 +237,7 @@ export default function Logout({ session }) {
                                         >
                                             <path d="M15.5 2A1.5 1.5 0 0014 3.5v13a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0016.5 2h-1zM9.5 6A1.5 1.5 0 008 7.5v9A1.5 1.5 0 009.5 18h1a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0010.5 6h-1zM3.5 10A1.5 1.5 0 002 11.5v5A1.5 1.5 0 003.5 18h1A1.5 1.5 0 006 16.5v-5A1.5 1.5 0 004.5 10h-1z" />
                                         </svg>
-                                        <span className="grow">Analytics</span>
+                                        <span className="grow">Konu Dağılımları</span>
                                     </a>
                                 </div>
                                 <hr className="h-5 border-0" />
@@ -316,7 +316,7 @@ export default function Logout({ session }) {
                 <main id="page-content" className="flex max-w-full flex-auto flex-col">
                     <div className="container mx-auto p-4 lg:p-8 xl:max-w-7xl">
                         <div className="grid grid-cols-1 md:gap-20 lg:grid-cols-12">
-                            {/* Navigation */}
+                            {/* Desktop Navigation */}
                             <nav className="hidden lg:col-span-3 lg:block">
                                 <a
                                     href="javascript:void(0)"
@@ -339,7 +339,7 @@ export default function Logout({ session }) {
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
-                                            className="hi-mini hi-cursor-arrow-rays inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
+                                            className="hi-mini hi-document-text inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -347,33 +347,15 @@ export default function Logout({ session }) {
                                         >
                                             <path
                                                 fillRule="evenodd"
-                                                d="M10 1a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 1zM5.05 3.05a.75.75 0 011.06 0l1.062 1.06A.75.75 0 116.11 5.173L5.05 4.11a.75.75 0 010-1.06zm9.9 0a.75.75 0 010 1.06l-1.06 1.062a.75.75 0 01-1.062-1.061l1.061-1.06a.75.75 0 011.06 0zM3 8a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5A.75.75 0 013 8zm11 0a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5A.75.75 0 0114 8zm-6.828 2.828a.75.75 0 010 1.061L6.11 12.95a.75.75 0 01-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm3.594-3.317a.75.75 0 00-1.37.364l-.492 6.861a.75.75 0 001.204.65l1.043-.799.985 3.678a.75.75 0 001.45-.388l-.978-3.646 1.292.204a.75.75 0 00.74-1.16l-3.874-5.764z"
+                                                d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm2.25 8.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 3a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z"
                                                 clipRule="evenodd"
                                             />
                                         </svg>
-                                        <span className="grow">Sales</span>
+                                        <span className="grow">Bildiriler</span>
                                         <span className="inline-flex items-center justify-center rounded-full border border-indigo-200 bg-indigo-50 px-1 text-xs text-indigo-900">
                                             250
                                         </span>
                                     </a>
-                                    <a
-                                        href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
-                                    >
-                                        <svg
-                                            className="hi-mini hi-chart-bar inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path d="M15.5 2A1.5 1.5 0 0014 3.5v13a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0016.5 2h-1zM9.5 6A1.5 1.5 0 008 7.5v9A1.5 1.5 0 009.5 18h1a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0010.5 6h-1zM3.5 10A1.5 1.5 0 002 11.5v5A1.5 1.5 0 003.5 18h1A1.5 1.5 0 006 16.5v-5A1.5 1.5 0 004.5 10h-1z" />
-                                        </svg>
-                                        <span className="grow">Analytics</span>
-                                    </a>
-                                </div>
-                                <hr className="h-5 border-0" />
-                                <div className="space-y-1.5">
                                     <a
                                         href="javascript:void(0)"
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
@@ -387,7 +369,44 @@ export default function Logout({ session }) {
                                         >
                                             <path d="M10 9a3 3 0 100-6 3 3 0 000 6zM6 8a2 2 0 11-4 0 2 2 0 014 0zM1.49 15.326a.78.78 0 01-.358-.442 3 3 0 014.308-3.516 6.484 6.484 0 00-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 01-2.07-.655zM16.44 15.98a4.97 4.97 0 002.07-.654.78.78 0 00.357-.442 3 3 0 00-4.308-3.517 6.484 6.484 0 011.907 3.96 2.32 2.32 0 01-.026.654zM18 8a2 2 0 11-4 0 2 2 0 014 0zM5.304 16.19a.844.844 0 01-.277-.71 5 5 0 019.947 0 .843.843 0 01-.277.71A6.975 6.975 0 0110 18a6.974 6.974 0 01-4.696-1.81z" />
                                         </svg>
-                                        <span className="grow">Users</span>
+
+                                        <span className="grow">Araştırmacılar</span>
+                                    </a>
+                                    <a
+                                        href="javascript:void(0)"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
+                                    >
+                                        <svg
+                                            fill="currentColor"
+                                            viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="hi-solid hi-user-circle inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                                                clipRule="evenodd"
+                                            />
+                                        </svg>
+                                        <span className="grow">Hakemler</span>
+                                    </a>
+                                </div>
+                                <hr className="h-5 border-0" />
+                                <div className="space-y-1.5">
+                                    <a
+                                        href="javascript:void(0)"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
+                                    >
+                                        <svg
+                                            className="hi-mini hi-chart-bar inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path d="M15.5 2A1.5 1.5 0 0014 3.5v13a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0016.5 2h-1zM9.5 6A1.5 1.5 0 008 7.5v9A1.5 1.5 0 009.5 18h1a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0010.5 6h-1zM3.5 10A1.5 1.5 0 002 11.5v5A1.5 1.5 0 003.5 18h1A1.5 1.5 0 006 16.5v-5A1.5 1.5 0 004.5 10h-1z" />
+                                        </svg>
+                                        <span className="grow">Konu Dağılımları</span>
                                         <span className="inline-flex items-center justify-center rounded-full border border-indigo-200 bg-indigo-50 px-1 text-xs text-indigo-900">
                                             563
                                         </span>
@@ -410,7 +429,7 @@ export default function Logout({ session }) {
                                             />
                                             <path d="M3 15.055v-.684c.126.053.255.1.39.142 2.092.642 4.313.987 6.61.987 2.297 0 4.518-.345 6.61-.987.135-.041.264-.089.39-.142v.684c0 1.347-.985 2.53-2.363 2.686a41.454 41.454 0 01-9.274 0C3.985 17.585 3 16.402 3 15.055z" />
                                         </svg>
-                                        <span className="grow">Projects</span>
+                                        <span className="grow">Projeler</span>
                                         <span className="inline-flex items-center justify-center rounded-full border border-indigo-200 bg-indigo-50 px-1 text-xs text-indigo-900">
                                             1.2k
                                         </span>
@@ -432,7 +451,7 @@ export default function Logout({ session }) {
                                                 clipRule="evenodd"
                                             />
                                         </svg>
-                                        <span className="grow">Invoices</span>
+                                        <span className="grow">Faturalar</span>
                                         <span className="inline-flex items-center justify-center rounded-full border border-indigo-200 bg-indigo-50 px-1 text-xs text-indigo-900">
                                             7.5k
                                         </span>
@@ -456,7 +475,7 @@ export default function Logout({ session }) {
                                                 clipRule="evenodd"
                                             />
                                         </svg>
-                                        <span className="grow">Account</span>
+                                        <span className="grow">Yönetici</span>
                                     </a>
                                     <a
                                         onClick={async () => await supabase.auth.signOut()}
@@ -475,7 +494,7 @@ export default function Logout({ session }) {
                                                 clipRule="evenodd"
                                             />
                                         </svg>
-                                        <span className="grow">Logout</span>
+                                        <span className="grow">Çıkış yap</span>
                                     </a>
                                 </div>
                             </nav>
@@ -487,7 +506,7 @@ export default function Logout({ session }) {
                                         <dl>
                                             <dt className="text-2xl font-bold">63</dt>
                                             <dd className="text-sm font-medium text-slate-500">
-                                                Accounts today
+                                                Bildiri
                                             </dd>
                                         </dl>
                                     </div>
@@ -495,7 +514,7 @@ export default function Logout({ session }) {
                                         <dl>
                                             <dt className="text-2xl font-bold">6</dt>
                                             <dd className="text-sm font-medium text-slate-500">
-                                                Sales today
+                                                Onaylanan
                                             </dd>
                                         </dl>
                                     </div>
@@ -503,7 +522,7 @@ export default function Logout({ session }) {
                                         <dl>
                                             <dt className="text-2xl font-bold">5</dt>
                                             <dd className="text-sm font-medium text-slate-500">
-                                                Open Tickets
+                                                Bekleyen
                                             </dd>
                                         </dl>
                                     </div>
@@ -511,7 +530,7 @@ export default function Logout({ session }) {
                                         <dl>
                                             <dt className="text-2xl font-bold">10</dt>
                                             <dd className="text-sm font-medium text-slate-500">
-                                                Pending Invoices
+                                                İnceleme Sürecinde
                                             </dd>
                                         </dl>
                                     </div>
@@ -519,7 +538,7 @@ export default function Logout({ session }) {
                                         <dl className="px-6 pt-6">
                                             <dt className="text-2xl font-bold">$168,682</dt>
                                             <dd className="text-sm font-medium text-slate-500">
-                                                Total Earnings
+                                                Akademisyenlerden topladığımız para
                                             </dd>
                                         </dl>
                                         <div className="-m-2">
@@ -540,7 +559,7 @@ export default function Logout({ session }) {
                                         <dl className="px-6 pt-6">
                                             <dt className="text-2xl font-bold">768,541</dt>
                                             <dd className="text-sm font-medium text-slate-500">
-                                                Total Pageviews
+                                                Toplam ziyaretçi
                                             </dd>
                                         </dl>
                                         <div className="-m-2">
