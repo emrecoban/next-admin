@@ -23,38 +23,45 @@ export default function RegisterPage() {
                                     <span>NextCongress</span>
                                 </h1>
                                 <h2 className="text-sm font-medium text-gray-500">
-                                    Hoş geldiniz, giriş yapmak için lütfen kullanıcı bilgilerinizi girin.
+                                    Bir adımda kendi hesabınızı oluşturun.
                                 </h2>
                             </header>
                             {/* END Header */}
 
-                            {/* Sign In Form */}
+                            {/* Register Form */}
                             <div className="flex flex-col rounded-lg shadow-sm bg-white overflow-hidden">
                                 <div className="p-5 md:px-16 md:py-12 grow">
                                     <form className="space-y-6">
+                                        <div className="space-y-1">
+                                            <label htmlFor="fullName" className="text-sm font-medium">Ad</label>
+                                            <input type="text" id="fullName" name="fullName" placeholder="Adınızı girin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+                                        </div>
                                         <div className="space-y-1">
                                             <label htmlFor="email" className="text-sm font-medium">E-posta</label>
                                             <input type="email" id="email" name="email" placeholder="E-posta adresinizi girin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
                                         </div>
                                         <div className="space-y-1">
-
-                                            <div className="flex items-center justify-between space-x-2">
-                                                <label htmlFor="password" className="text-sm font-medium">Parola</label>
-                                                <Link href="password" className="text-sm font-medium inline-block text-blue-600 hover:text-blue-400">Şifremi Unuttum</Link>
-                                            </div>
-                                            <input type="password" id="password" name="password" placeholder="Parolanızı girin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+                                            <label htmlFor="password" className="text-sm font-medium">Parola</label>
+                                            <input type="password" id="password" name="password" placeholder="Bir parola belirleyin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
                                         </div>
+                                        <div className="space-y-1">
+                                            <label htmlFor="password" className="text-sm font-medium">Parola Onayla</label>
+                                            <input type="password" id="password" name="password" placeholder="Belirlediğiniz parolayı tekrar girin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+                                        </div>
+                                        <label className="flex items-center">
+                                            <input type="checkbox" id="rules_accept" name="rules_accept" className="border border-gray-200 rounded h-4 w-4 text-blue-500 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 hover:cursor-pointer" />
+                                            <span className="text-sm ml-2 hover:cursor-pointer">Kullanım şartlarını kabul ediyorum.</span>
+                                        </label>
                                         <div>
-
-                                            <button type="submit" className="w-full inline-flex justify-center items-center space-x-2 border font-semibold rounded-lg px-6 py-3 leading-6 border-blue-700 bg-blue-700 text-white hover:text-white hover:bg-blue-600 hover:border-blue-600 focus:ring focus:ring-blue-400 focus:ring-opacity-50 active:bg-blue-700 active:border-blue-700">
+                                            <button type="submit" className="w-full inline-flex justify-center items-center space-x-2 border font-semibold rounded-lg px-6 py-3 leading-6 border-green-600 bg-lime-600 text-white hover:text-white hover:bg-lime-700 hover:border-green-700 focus:ring focus:ring-lime-400 focus:ring-opacity-50 active:bg-lime-600 active:border-green-700">
                                                 <svg className="hi-mini hi-arrow-uturn-right inline-block w-5 h-5 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M12.207 2.232a.75.75 0 00.025 1.06l4.146 3.958H6.375a5.375 5.375 0 000 10.75H9.25a.75.75 0 000-1.5H6.375a3.875 3.875 0 010-7.75h10.003l-4.146 3.957a.75.75 0 001.036 1.085l5.5-5.25a.75.75 0 000-1.085l-5.5-5.25a.75.75 0 00-1.06.025z" clipRule="evenodd" /></svg>
-                                                <span>Giriş Yap</span>
+                                                <span>Kayıt Ol</span>
                                             </button>
                                         </div>
                                     </form>
                                 </div>
                                 <div className="p-5 md:px-16 grow text-sm text-center bg-gray-50">
-                                    <Link href="register" className="font-medium text-blue-600 hover:text-blue-400">Yeni Hesap Oluştur</Link>
+                                    <Link href="/admin/auth/login" className="font-medium text-blue-600 hover:text-blue-400">Giriş Yap</Link>
                                 </div>
                             </div>
                             {/* END Sign In Form */}
