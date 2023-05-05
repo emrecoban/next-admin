@@ -17,7 +17,7 @@ export default function Logout({ session }) {
             {/* Page Container */}
             <div
                 id="page-container"
-                className="mx-auto flex min-h-screen w-full min-w-[320px] flex-col bg-slate-100"
+                className="mx-auto flex min-h-screen w-full min-w-[320px] flex-col bg-slate-50"
             >
                 {/* Page Header */}
                 <header id="page-header" className="z-1 flex flex-none items-center">
