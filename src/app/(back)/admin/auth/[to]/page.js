@@ -19,5 +19,4 @@ export default async function Auth({ params }) {
     } else {
         return redirect('/admin')
     }
-
 }
