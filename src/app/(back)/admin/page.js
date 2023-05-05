@@ -1,4 +1,4 @@
-import LoginPage from "./auth/[to]/LoginPage"
+import { redirect } from 'next/navigation';
 import Dashboard from "./Dashboard"
 import { createServerComponentSupabaseClient } from '@supabase/auth-helpers-nextjs'
 import { headers, cookies } from 'next/headers'
@@ -12,5 +12,5 @@ export default async function Admin() {
     if (userData.session) {
         return (<Dashboard session={userData.session} />)
     }
-    return (<LoginPage />)
+    return redirect('/admin/auth/login')
 }
