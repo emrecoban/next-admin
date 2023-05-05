@@ -28,10 +28,10 @@ export default function Logout({ session }) {
                                 {/* Logo */}
                                 <a
                                     href="javascript:void(0)"
-                                    className="text-md group inline-flex items-center space-x-1 font-bold tracking-wide text-slate-700 hover:text-indigo-600 active:text-slate-700 sm:text-lg"
+                                    className="text-md group inline-flex items-center space-x-1 font-bold tracking-wide text-slate-700 hover:text-blue-600 active:text-slate-700 sm:text-lg"
                                 >
                                     <svg
-                                        className="hi-mini hi-square-3-stack-3d inline-block h-5 w-5 rotate-90 text-indigo-500"
+                                        className="hi-mini hi-square-3-stack-3d inline-block h-5 w-5 rotate-90 text-blue-600"
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 20 20"
                                         fill="currentColor"
@@ -188,7 +188,7 @@ export default function Logout({ session }) {
                             <nav className="flex flex-col py-4 lg:hidden">
                                 <a
                                     href="javascript:void(0)"
-                                    className="group flex items-center justify-between space-x-2 rounded-md border border-transparent bg-indigo-100 px-2.5 py-2 text-sm font-semibold text-indigo-500 active:border-indigo-200"
+                                    className="group flex items-center justify-between space-x-2 rounded-md border border-blue-50 bg-blue-100 px-2.5 py-2 text-sm font-semibold text-blue-600 active:border-indigo-200"
                                 >
                                     <svg
                                         fill="currentColor"
@@ -204,10 +204,10 @@ export default function Logout({ session }) {
                                 <div className="space-y-1.5">
                                     <a
                                         href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
-                                            className="hi-mini hi-cursor-arrow-rays inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                            className="hi-mini hi-cursor-arrow-rays inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -226,10 +226,10 @@ export default function Logout({ session }) {
                                     </a>
                                     <a
                                         href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
-                                            className="hi-mini hi-chart-bar inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                            className="hi-mini hi-chart-bar inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -244,10 +244,10 @@ export default function Logout({ session }) {
                                 <div className="space-y-1.5">
                                     <a
                                         href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
-                                            className="hi-mini hi-user-group inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                            className="hi-mini hi-user-group inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -262,10 +262,10 @@ export default function Logout({ session }) {
                                     </a>
                                     <a
                                         href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
-                                            className="hi-mini hi-briefcase inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                            className="hi-mini hi-briefcase inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -285,10 +285,10 @@ export default function Logout({ session }) {
                                     </a>
                                     <a
                                         href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
-                                            className="hi-mini hi-document-text inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                            className="hi-mini hi-document-text inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -320,7 +320,7 @@ export default function Logout({ session }) {
                             <nav className="hidden lg:col-span-3 lg:block">
                                 <a
                                     href="javascript:void(0)"
-                                    className="group flex items-center justify-between space-x-2 rounded-md border border-transparent bg-indigo-100 px-2.5 py-2 text-sm font-semibold text-indigo-500 active:border-indigo-200"
+                                    className="group flex items-center justify-between space-x-2 rounded-md border border-blue-100 bg-blue-50 px-2.5 py-2 text-sm font-semibold text-blue-600 active:border-indigo-200"
                                 >
                                     <svg
                                         fill="currentColor"
@@ -330,16 +330,16 @@ export default function Logout({ session }) {
                                     >
                                         <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                                     </svg>
-                                    <span className="grow">Dashboard</span>
+                                    <span className="grow">Başlangıç</span>
                                 </a>
                                 <hr className="h-5 border-0" />
                                 <div className="space-y-1.5">
                                     <a
                                         href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
-                                            className="hi-mini hi-cursor-arrow-rays inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                            className="hi-mini hi-cursor-arrow-rays inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -358,10 +358,10 @@ export default function Logout({ session }) {
                                     </a>
                                     <a
                                         href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
-                                            className="hi-mini hi-chart-bar inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                            className="hi-mini hi-chart-bar inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -376,10 +376,10 @@ export default function Logout({ session }) {
                                 <div className="space-y-1.5">
                                     <a
                                         href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
-                                            className="hi-mini hi-user-group inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                            className="hi-mini hi-user-group inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -394,10 +394,10 @@ export default function Logout({ session }) {
                                     </a>
                                     <a
                                         href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
-                                            className="hi-mini hi-briefcase inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                            className="hi-mini hi-briefcase inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -417,10 +417,10 @@ export default function Logout({ session }) {
                                     </a>
                                     <a
                                         href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
-                                            className="hi-mini hi-document-text inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                            className="hi-mini hi-document-text inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -442,13 +442,13 @@ export default function Logout({ session }) {
                                 <div className="space-y-1.5">
                                     <a
                                         href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
                                             fill="currentColor"
                                             viewBox="0 0 20 20"
                                             xmlns="http://www.w3.org/2000/svg"
-                                            className="hi-solid hi-user-circle inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                            className="hi-solid hi-user-circle inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                         >
                                             <path
                                                 fillRule="evenodd"
@@ -460,10 +460,10 @@ export default function Logout({ session }) {
                                     </a>
                                     <a
                                         onClick={async () => await supabase.auth.signOut()}
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
-                                            className="hi-mini hi-lock-closed inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                            className="hi-mini hi-lock-closed inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-blue-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
@@ -732,10 +732,10 @@ export default function Logout({ session }) {
                     <div className="container mx-auto px-4 lg:px-8 xl:max-w-7xl">
                         <div className="flex flex-col space-y-2 border-t-2 border-slate-200/50 py-6 text-center text-sm font-medium text-slate-600 md:flex-row md:justify-between md:space-y-0 md:text-left">
                             <div>
-                                © <span className="font-semibold">tailadmin</span>
+                                © <span className="font-semibold">2023 NextAdmin.</span>
                             </div>
                             <div className="inline-flex items-center justify-center">
-                                <span>Crafted with</span>
+                                <span>Built with</span>
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20"
@@ -746,14 +746,11 @@ export default function Logout({ session }) {
                                     <path d="M9.653 16.915l-.005-.003-.019-.01a20.759 20.759 0 01-1.162-.682 22.045 22.045 0 01-2.582-1.9C4.045 12.733 2 10.352 2 7.5a4.5 4.5 0 018-2.828A4.5 4.5 0 0118 7.5c0 2.852-2.044 5.233-3.885 6.82a22.049 22.049 0 01-3.744 2.582l-.019.01-.005.003h-.002a.739.739 0 01-.69.001l-.002-.001z" />
                                 </svg>
                                 <span>
-                                    by
-                                    <a
+                                    by <a
                                         className="font-medium text-indigo-600 transition hover:text-indigo-700"
-                                        href="https://pixelcave.com"
+                                        href="https://github.com/emrecoban"
                                         target="_blank"
-                                    >
-                                        pixelcave
-                                    </a>
+                                    >emrecoban</a>.
                                 </span>
                             </div>
                         </div>
