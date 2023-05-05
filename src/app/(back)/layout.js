@@ -2,7 +2,7 @@ import '../globals-back.css'
 import SupabaseProvider from './provider/supabase'
 
 export const metadata = {
-  title: 'Next Admin',
+  title: 'NextCongress',
   description: 'Admin Dashboard',
 }
 
