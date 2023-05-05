@@ -1,15 +1,4 @@
-'use client'
-
-import { useSupabase } from "../provider/supabase"
-import { useState } from "react"
-import Image from "next/image"
-
-export default function Logout({ session }) {
-    const { supabase } = useSupabase()
-    const [userDropdownOpen, setUserDropdownOpen] = useState(false)
-    const [mobileNavMenu, setMobileNavMenu] = useState(false)
-    console.log("gelen veri => ", session)
-    //commit 2 May 4
+function tail() {
     return (
         <>
             {/* Page Container */}
@@ -39,7 +28,7 @@ export default function Logout({ session }) {
                                         <path d="M3.196 8.87l-.825.483a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.758 0l7.25-4.25a.75.75 0 000-1.294l-.825-.484-5.666 3.322a2.25 2.25 0 01-2.276 0L3.196 8.87z" />
                                         <path d="M10.38 1.103a.75.75 0 00-.76 0l-7.25 4.25a.75.75 0 000 1.294l7.25 4.25a.75.75 0 00.76 0l7.25-4.25a.75.75 0 000-1.294l-7.25-4.25z" />
                                     </svg>
-                                    <span>NextAdmin</span>
+                                    <span>TailAdmin</span>
                                 </a>
                                 {/* END Logo */}
                             </div>
@@ -75,10 +64,9 @@ export default function Logout({ session }) {
                                         className="group flex items-center justify-between rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200 active:bg-indigo-100 sm:space-x-2"
                                         id="tk-dropdown-layouts-user"
                                         aria-haspopup="true"
-                                        onClick={() => setUserDropdownOpen(!userDropdownOpen)}
                                     >
-                                        <span className="sm:hidden">Admin</span>
-                                        <span className="hidden sm:inline-flex sm:gap-x-1"><Image src={session.user.user_metadata.avatar_url} width="20" height="20" alt="avatar" className="rounded-xl" /> {session.user.user_metadata.full_name}</span>
+                                        <span className="sm:hidden">JD</span>
+                                        <span className="hidden sm:inline-block">John Doe</span>
                                         <svg
                                             fill="currentColor"
                                             viewBox="0 0 20 20"
@@ -94,109 +82,105 @@ export default function Logout({ session }) {
                                     </button>
                                     {/* END Dropdown Toggle Button */}
                                     {/* Dropdown */}
-                                    {userDropdownOpen && (
-                                        <div
-                                            role="menu"
-                                            aria-labelledby="tk-dropdown-layouts-user"
-                                            className="absolute right-0 mt-2 w-48 origin-top-right rounded shadow-xl shadow-slate-200"
-                                        >
-                                            <div className="divide-y divide-slate-100 rounded bg-white ring-1 ring-slate-900 ring-opacity-5">
-                                                <div className="space-y-1 p-2">
-                                                    <a
+                                    <div
+                                        role="menu"
+                                        aria-labelledby="tk-dropdown-layouts-user"
+                                        className="absolute right-0 mt-2 w-48 origin-top-right rounded shadow-xl shadow-slate-200"
+                                    >
+                                        <div className="divide-y divide-slate-100 rounded bg-white ring-1 ring-slate-900 ring-opacity-5">
+                                            <div className="space-y-1 p-2">
+                                                <a
+                                                    role="menuitem"
+                                                    href="javascript:void(0)"
+                                                    className="group flex items-center space-x-2 rounded py-2 px-3 text-sm font-medium text-slate-900 hover:bg-slate-100 hover:text-slate-700"
+                                                >
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 20 20"
+                                                        fill="currentColor"
+                                                        aria-hidden="true"
+                                                        className="hi-mini hi-beaker inline-block h-5 w-5 text-slate-300 group-hover:text-indigo-500"
+                                                    >
+                                                        <path
+                                                            fillRule="evenodd"
+                                                            d="M8.5 3.528v4.644c0 .729-.29 1.428-.805 1.944l-1.217 1.216a8.75 8.75 0 013.55.621l.502.201a7.25 7.25 0 004.178.365l-2.403-2.403a2.75 2.75 0 01-.805-1.944V3.528a40.205 40.205 0 00-3 0zm4.5.084l.19.015a.75.75 0 10.12-1.495 41.364 41.364 0 00-6.62 0 .75.75 0 00.12 1.495L7 3.612v4.56c0 .331-.132.649-.366.883L2.6 13.09c-1.496 1.496-.817 4.15 1.403 4.475C5.961 17.852 7.963 18 10 18s4.039-.148 5.997-.436c2.22-.325 2.9-2.979 1.403-4.475l-4.034-4.034A1.25 1.25 0 0113 8.172v-4.56z"
+                                                            clipRule="evenodd"
+                                                        />
+                                                    </svg>
+                                                    <span>Lab</span>
+                                                </a>
+                                                <a
+                                                    role="menuitem"
+                                                    href="javascript:void(0)"
+                                                    className="group flex items-center space-x-2 rounded py-2 px-3 text-sm font-medium text-slate-900 hover:bg-slate-100 hover:text-slate-700"
+                                                >
+                                                    <svg
+                                                        fill="currentColor"
+                                                        viewBox="0 0 20 20"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        className="hi-solid hi-inbox inline-block h-5 w-5 text-slate-300 group-hover:text-indigo-500"
+                                                    >
+                                                        <path
+                                                            fillRule="evenodd"
+                                                            d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z"
+                                                            clipRule="evenodd"
+                                                        />
+                                                    </svg>
+                                                    <span>Inbox</span>
+                                                </a>
+                                            </div>
+                                            <div className="space-y-1 p-2">
+                                                <a
+                                                    role="menuitem"
+                                                    href="javascript:void(0)"
+                                                    className="group flex items-center space-x-2 rounded py-2 px-3 text-sm font-medium text-slate-900 hover:bg-slate-100 hover:text-slate-700"
+                                                >
+                                                    <svg
+                                                        fill="currentColor"
+                                                        viewBox="0 0 20 20"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        className="hi-solid hi-user-circle inline-block h-5 w-5 text-slate-300 group-hover:text-indigo-500"
+                                                    >
+                                                        <path
+                                                            fillRule="evenodd"
+                                                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                                                            clipRule="evenodd"
+                                                        />
+                                                    </svg>
+                                                    <span>Account</span>
+                                                </a>
+                                            </div>
+                                            <div className="space-y-1 p-2">
+                                                <form onsubmit="return false;">
+                                                    <button
+                                                        type="submit"
                                                         role="menuitem"
-                                                        href="javascript:void(0)"
-                                                        className="group flex items-center space-x-2 rounded py-2 px-3 text-sm font-medium text-slate-900 hover:bg-slate-100 hover:text-slate-700"
+                                                        className="group flex w-full items-center space-x-2 rounded py-2 px-3 text-sm font-medium text-slate-900 hover:bg-slate-100 hover:text-slate-700"
                                                     >
                                                         <svg
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            viewBox="0 0 20 20"
                                                             fill="currentColor"
-                                                            aria-hidden="true"
-                                                            className="hi-mini hi-beaker inline-block h-5 w-5 text-slate-300 group-hover:text-indigo-500"
+                                                            viewBox="0 0 20 20"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            className="hi-solid hi-lock-closed inline-block h-5 w-5 text-slate-300 group-hover:text-indigo-500"
                                                         >
                                                             <path
                                                                 fillRule="evenodd"
-                                                                d="M8.5 3.528v4.644c0 .729-.29 1.428-.805 1.944l-1.217 1.216a8.75 8.75 0 013.55.621l.502.201a7.25 7.25 0 004.178.365l-2.403-2.403a2.75 2.75 0 01-.805-1.944V3.528a40.205 40.205 0 00-3 0zm4.5.084l.19.015a.75.75 0 10.12-1.495 41.364 41.364 0 00-6.62 0 .75.75 0 00.12 1.495L7 3.612v4.56c0 .331-.132.649-.366.883L2.6 13.09c-1.496 1.496-.817 4.15 1.403 4.475C5.961 17.852 7.963 18 10 18s4.039-.148 5.997-.436c2.22-.325 2.9-2.979 1.403-4.475l-4.034-4.034A1.25 1.25 0 0113 8.172v-4.56z"
+                                                                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
                                                                 clipRule="evenodd"
                                                             />
                                                         </svg>
-                                                        <span>Lab</span>
-                                                    </a>
-                                                    <a
-                                                        role="menuitem"
-                                                        href="javascript:void(0)"
-                                                        className="group flex items-center space-x-2 rounded py-2 px-3 text-sm font-medium text-slate-900 hover:bg-slate-100 hover:text-slate-700"
-                                                    >
-                                                        <svg
-                                                            fill="currentColor"
-                                                            viewBox="0 0 20 20"
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            className="hi-solid hi-inbox inline-block h-5 w-5 text-slate-300 group-hover:text-indigo-500"
-                                                        >
-                                                            <path
-                                                                fillRule="evenodd"
-                                                                d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z"
-                                                                clipRule="evenodd"
-                                                            />
-                                                        </svg>
-                                                        <span>Inbox</span>
-                                                    </a>
-                                                </div>
-                                                <div className="space-y-1 p-2">
-                                                    <a
-                                                        role="menuitem"
-                                                        href="javascript:void(0)"
-                                                        className="group flex items-center space-x-2 rounded py-2 px-3 text-sm font-medium text-slate-900 hover:bg-slate-100 hover:text-slate-700"
-                                                    >
-                                                        <svg
-                                                            fill="currentColor"
-                                                            viewBox="0 0 20 20"
-                                                            xmlns="http://www.w3.org/2000/svg"
-                                                            className="hi-solid hi-user-circle inline-block h-5 w-5 text-slate-300 group-hover:text-indigo-500"
-                                                        >
-                                                            <path
-                                                                fillRule="evenodd"
-                                                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
-                                                                clipRule="evenodd"
-                                                            />
-                                                        </svg>
-                                                        <span>Account</span>
-                                                    </a>
-                                                </div>
-                                                <div className="space-y-1 p-2">
-                                                    <form onsubmit="return false;">
-                                                        <button
-                                                            type="submit"
-                                                            role="menuitem"
-                                                            className="group flex w-full items-center space-x-2 rounded py-2 px-3 text-sm font-medium text-slate-900 hover:bg-slate-100 hover:text-slate-700"
-                                                        >
-                                                            <svg
-                                                                fill="currentColor"
-                                                                viewBox="0 0 20 20"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                className="hi-solid hi-lock-closed inline-block h-5 w-5 text-slate-300 group-hover:text-indigo-500"
-                                                            >
-                                                                <path
-                                                                    fillRule="evenodd"
-                                                                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                                                                    clipRule="evenodd"
-                                                                />
-                                                            </svg>
-                                                            <span>Logout</span>
-                                                        </button>
-                                                    </form>
-                                                </div>
+                                                        <span>Logout</span>
+                                                    </button>
+                                                </form>
                                             </div>
                                         </div>
-                                    )}
-
+                                    </div>
                                     {/* END Dropdown */}
                                 </div>
                                 {/* END User Dropdown */}
                                 {/* Toggle Mobile Navigation */}
                                 <div className="lg:hidden">
                                     <button
-                                        onClick={() => setMobileNavMenu(!mobileNavMenu)}
                                         type="button"
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200 active:bg-indigo-100"
                                     >
@@ -219,131 +203,128 @@ export default function Logout({ session }) {
                             {/* END Right Section */}
                         </div>
                         {/* Mobile Navigation */}
-                        {mobileNavMenu && (
-                            <nav className="flex flex-col py-4 lg:hidden">
+                        <nav className="flex flex-col py-4 lg:hidden">
+                            <a
+                                href="javascript:void(0)"
+                                className="group flex items-center justify-between space-x-2 rounded-md border border-transparent bg-indigo-100 px-2.5 py-2 text-sm font-semibold text-indigo-500 active:border-indigo-200"
+                            >
+                                <svg
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="hi-solid hi-home inline-block h-5 w-5 flex-none"
+                                >
+                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                                </svg>
+                                <span className="grow">Dashboard</span>
+                            </a>
+                            <hr className="h-5 border-0" />
+                            <div className="space-y-1.5">
                                 <a
                                     href="javascript:void(0)"
-                                    className="group flex items-center justify-between space-x-2 rounded-md border border-transparent bg-indigo-100 px-2.5 py-2 text-sm font-semibold text-indigo-500 active:border-indigo-200"
+                                    className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
                                 >
                                     <svg
-                                        fill="currentColor"
-                                        viewBox="0 0 20 20"
+                                        className="hi-mini hi-cursor-arrow-rays inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="hi-solid hi-home inline-block h-5 w-5 flex-none"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
                                     >
-                                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M10 1a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 1zM5.05 3.05a.75.75 0 011.06 0l1.062 1.06A.75.75 0 116.11 5.173L5.05 4.11a.75.75 0 010-1.06zm9.9 0a.75.75 0 010 1.06l-1.06 1.062a.75.75 0 01-1.062-1.061l1.061-1.06a.75.75 0 011.06 0zM3 8a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5A.75.75 0 013 8zm11 0a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5A.75.75 0 0114 8zm-6.828 2.828a.75.75 0 010 1.061L6.11 12.95a.75.75 0 01-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm3.594-3.317a.75.75 0 00-1.37.364l-.492 6.861a.75.75 0 001.204.65l1.043-.799.985 3.678a.75.75 0 001.45-.388l-.978-3.646 1.292.204a.75.75 0 00.74-1.16l-3.874-5.764z"
+                                            clipRule="evenodd"
+                                        />
                                     </svg>
-                                    <span className="grow">Dashboard</span>
+                                    <span className="grow">Sales</span>
+                                    <span className="inline-flex items-center justify-center rounded-full border border-indigo-200 bg-indigo-50 px-1 text-xs text-indigo-900">
+                                        250
+                                    </span>
                                 </a>
-                                <hr className="h-5 border-0" />
-                                <div className="space-y-1.5">
-                                    <a
-                                        href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                <a
+                                    href="javascript:void(0)"
+                                    className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                >
+                                    <svg
+                                        className="hi-mini hi-chart-bar inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
                                     >
-                                        <svg
-                                            className="hi-mini hi-cursor-arrow-rays inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M10 1a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 1zM5.05 3.05a.75.75 0 011.06 0l1.062 1.06A.75.75 0 116.11 5.173L5.05 4.11a.75.75 0 010-1.06zm9.9 0a.75.75 0 010 1.06l-1.06 1.062a.75.75 0 01-1.062-1.061l1.061-1.06a.75.75 0 011.06 0zM3 8a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5A.75.75 0 013 8zm11 0a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5A.75.75 0 0114 8zm-6.828 2.828a.75.75 0 010 1.061L6.11 12.95a.75.75 0 01-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm3.594-3.317a.75.75 0 00-1.37.364l-.492 6.861a.75.75 0 001.204.65l1.043-.799.985 3.678a.75.75 0 001.45-.388l-.978-3.646 1.292.204a.75.75 0 00.74-1.16l-3.874-5.764z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
-                                        <span className="grow">Sales</span>
-                                        <span className="inline-flex items-center justify-center rounded-full border border-indigo-200 bg-indigo-50 px-1 text-xs text-indigo-900">
-                                            250
-                                        </span>
-                                    </a>
-                                    <a
-                                        href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        <path d="M15.5 2A1.5 1.5 0 0014 3.5v13a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0016.5 2h-1zM9.5 6A1.5 1.5 0 008 7.5v9A1.5 1.5 0 009.5 18h1a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0010.5 6h-1zM3.5 10A1.5 1.5 0 002 11.5v5A1.5 1.5 0 003.5 18h1A1.5 1.5 0 006 16.5v-5A1.5 1.5 0 004.5 10h-1z" />
+                                    </svg>
+                                    <span className="grow">Analytics</span>
+                                </a>
+                            </div>
+                            <hr className="h-5 border-0" />
+                            <div className="space-y-1.5">
+                                <a
+                                    href="javascript:void(0)"
+                                    className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                >
+                                    <svg
+                                        className="hi-mini hi-user-group inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
                                     >
-                                        <svg
-                                            className="hi-mini hi-chart-bar inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path d="M15.5 2A1.5 1.5 0 0014 3.5v13a1.5 1.5 0 001.5 1.5h1a1.5 1.5 0 001.5-1.5v-13A1.5 1.5 0 0016.5 2h-1zM9.5 6A1.5 1.5 0 008 7.5v9A1.5 1.5 0 009.5 18h1a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0010.5 6h-1zM3.5 10A1.5 1.5 0 002 11.5v5A1.5 1.5 0 003.5 18h1A1.5 1.5 0 006 16.5v-5A1.5 1.5 0 004.5 10h-1z" />
-                                        </svg>
-                                        <span className="grow">Analytics</span>
-                                    </a>
-                                </div>
-                                <hr className="h-5 border-0" />
-                                <div className="space-y-1.5">
-                                    <a
-                                        href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zM6 8a2 2 0 11-4 0 2 2 0 014 0zM1.49 15.326a.78.78 0 01-.358-.442 3 3 0 014.308-3.516 6.484 6.484 0 00-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 01-2.07-.655zM16.44 15.98a4.97 4.97 0 002.07-.654.78.78 0 00.357-.442 3 3 0 00-4.308-3.517 6.484 6.484 0 011.907 3.96 2.32 2.32 0 01-.026.654zM18 8a2 2 0 11-4 0 2 2 0 014 0zM5.304 16.19a.844.844 0 01-.277-.71 5 5 0 019.947 0 .843.843 0 01-.277.71A6.975 6.975 0 0110 18a6.974 6.974 0 01-4.696-1.81z" />
+                                    </svg>
+                                    <span className="grow">Users</span>
+                                    <span className="inline-flex items-center justify-center rounded-full border border-indigo-200 bg-indigo-50 px-1 text-xs text-indigo-900">
+                                        563
+                                    </span>
+                                </a>
+                                <a
+                                    href="javascript:void(0)"
+                                    className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                >
+                                    <svg
+                                        className="hi-mini hi-briefcase inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
                                     >
-                                        <svg
-                                            className="hi-mini hi-user-group inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path d="M10 9a3 3 0 100-6 3 3 0 000 6zM6 8a2 2 0 11-4 0 2 2 0 014 0zM1.49 15.326a.78.78 0 01-.358-.442 3 3 0 014.308-3.516 6.484 6.484 0 00-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 01-2.07-.655zM16.44 15.98a4.97 4.97 0 002.07-.654.78.78 0 00.357-.442 3 3 0 00-4.308-3.517 6.484 6.484 0 011.907 3.96 2.32 2.32 0 01-.026.654zM18 8a2 2 0 11-4 0 2 2 0 014 0zM5.304 16.19a.844.844 0 01-.277-.71 5 5 0 019.947 0 .843.843 0 01-.277.71A6.975 6.975 0 0110 18a6.974 6.974 0 01-4.696-1.81z" />
-                                        </svg>
-                                        <span className="grow">Users</span>
-                                        <span className="inline-flex items-center justify-center rounded-full border border-indigo-200 bg-indigo-50 px-1 text-xs text-indigo-900">
-                                            563
-                                        </span>
-                                    </a>
-                                    <a
-                                        href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M6 3.75A2.75 2.75 0 018.75 1h2.5A2.75 2.75 0 0114 3.75v.443c.572.055 1.14.122 1.706.2C17.053 4.582 18 5.75 18 7.07v3.469c0 1.126-.694 2.191-1.83 2.54-1.952.599-4.024.921-6.17.921s-4.219-.322-6.17-.921C2.694 12.73 2 11.665 2 10.539V7.07c0-1.321.947-2.489 2.294-2.676A41.047 41.047 0 016 4.193V3.75zm6.5 0v.325a41.622 41.622 0 00-5 0V3.75c0-.69.56-1.25 1.25-1.25h2.5c.69 0 1.25.56 1.25 1.25zM10 10a1 1 0 00-1 1v.01a1 1 0 001 1h.01a1 1 0 001-1V11a1 1 0 00-1-1H10z"
+                                            clipRule="evenodd"
+                                        />
+                                        <path d="M3 15.055v-.684c.126.053.255.1.39.142 2.092.642 4.313.987 6.61.987 2.297 0 4.518-.345 6.61-.987.135-.041.264-.089.39-.142v.684c0 1.347-.985 2.53-2.363 2.686a41.454 41.454 0 01-9.274 0C3.985 17.585 3 16.402 3 15.055z" />
+                                    </svg>
+                                    <span className="grow">Projects</span>
+                                    <span className="inline-flex items-center justify-center rounded-full border border-indigo-200 bg-indigo-50 px-1 text-xs text-indigo-900">
+                                        1.2k
+                                    </span>
+                                </a>
+                                <a
+                                    href="javascript:void(0)"
+                                    className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
+                                >
+                                    <svg
+                                        className="hi-mini hi-document-text inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                        aria-hidden="true"
                                     >
-                                        <svg
-                                            className="hi-mini hi-briefcase inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M6 3.75A2.75 2.75 0 018.75 1h2.5A2.75 2.75 0 0114 3.75v.443c.572.055 1.14.122 1.706.2C17.053 4.582 18 5.75 18 7.07v3.469c0 1.126-.694 2.191-1.83 2.54-1.952.599-4.024.921-6.17.921s-4.219-.322-6.17-.921C2.694 12.73 2 11.665 2 10.539V7.07c0-1.321.947-2.489 2.294-2.676A41.047 41.047 0 016 4.193V3.75zm6.5 0v.325a41.622 41.622 0 00-5 0V3.75c0-.69.56-1.25 1.25-1.25h2.5c.69 0 1.25.56 1.25 1.25zM10 10a1 1 0 00-1 1v.01a1 1 0 001 1h.01a1 1 0 001-1V11a1 1 0 00-1-1H10z"
-                                                clipRule="evenodd"
-                                            />
-                                            <path d="M3 15.055v-.684c.126.053.255.1.39.142 2.092.642 4.313.987 6.61.987 2.297 0 4.518-.345 6.61-.987.135-.041.264-.089.39-.142v.684c0 1.347-.985 2.53-2.363 2.686a41.454 41.454 0 01-9.274 0C3.985 17.585 3 16.402 3 15.055z" />
-                                        </svg>
-                                        <span className="grow">Projects</span>
-                                        <span className="inline-flex items-center justify-center rounded-full border border-indigo-200 bg-indigo-50 px-1 text-xs text-indigo-900">
-                                            1.2k
-                                        </span>
-                                    </a>
-                                    <a
-                                        href="javascript:void(0)"
-                                        className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200"
-                                    >
-                                        <svg
-                                            className="hi-mini hi-document-text inline-block h-5 w-5 flex-none text-slate-300 group-hover:text-indigo-500"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 20 20"
-                                            fill="currentColor"
-                                            aria-hidden="true"
-                                        >
-                                            <path
-                                                fillRule="evenodd"
-                                                d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm2.25 8.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 3a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z"
-                                                clipRule="evenodd"
-                                            />
-                                        </svg>
-                                        <span className="grow">Invoices</span>
-                                        <span className="inline-flex items-center justify-center rounded-full border border-indigo-200 bg-indigo-50 px-1 text-xs text-indigo-900">
-                                            7.5k
-                                        </span>
-                                    </a>
-                                </div>
-                            </nav>
-                        )}
-
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm2.25 8.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm0 3a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                    <span className="grow">Invoices</span>
+                                    <span className="inline-flex items-center justify-center rounded-full border border-indigo-200 bg-indigo-50 px-1 text-xs text-indigo-900">
+                                        7.5k
+                                    </span>
+                                </a>
+                            </div>
+                        </nav>
                         {/* END Mobile Navigation */}
                     </div>
                 </header>
@@ -801,13 +782,3 @@ export default function Logout({ session }) {
         </>
     )
 }
-
-{/* 
-<div className="h-screen flex flex-col gap-y-5 justify-center items-center">
-            
-            <p>Welcome </p>
-            <button className="bg-black text-white px-8 py-3 rounded-md hover:drop-shadow-2xl" onClick={async () => await supabase.auth.signOut()}>
-                Logout
-            </button>
-        </div>
-*/ }
