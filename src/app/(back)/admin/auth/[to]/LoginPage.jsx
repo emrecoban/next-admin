@@ -40,7 +40,7 @@ export default function LoginPage() {
 
                                             <div className="flex items-center justify-between space-x-2">
                                                 <label htmlFor="password" className="text-sm font-medium">Parola</label>
-                                                <Link href="password" className="text-sm font-medium inline-block text-blue-600 hover:text-blue-400">Şifremi Unuttum</Link>
+                                                <Link href="/admin/auth/password" className="text-sm font-medium inline-block text-blue-600 hover:text-blue-400">Şifremi Unuttum</Link>
                                             </div>
                                             <input type="password" id="password" name="password" placeholder="Parolanızı girin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
                                         </div>
@@ -54,7 +54,7 @@ export default function LoginPage() {
                                     </form>
                                 </div>
                                 <div className="p-5 md:px-16 grow text-sm text-center bg-gray-50">
-                                    <Link href="register" className="font-medium text-blue-600 hover:text-blue-400">Yeni Hesap Oluştur</Link>
+                                    <Link href="/admin/auth/register" className="font-medium text-blue-600 hover:text-blue-400">Yeni Hesap Oluştur</Link>
                                 </div>
                             </div>
                             {/* END Sign In Form */}

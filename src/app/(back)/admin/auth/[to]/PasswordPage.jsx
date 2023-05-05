@@ -23,7 +23,7 @@ export default function PasswordPage() {
                                     <span>NextCongress</span>
                                 </h1>
                                 <h2 className="text-sm font-medium text-gray-500">
-                                    Hoş geldiniz, giriş yapmak için lütfen kullanıcı bilgilerinizi girin.
+                                    Parolanızı yenilemek için giriş yaparken kullandığınız e-posta adresinizi girin.
                                 </h2>
                             </header>
                             {/* END Header */}
@@ -36,25 +36,15 @@ export default function PasswordPage() {
                                             <label htmlFor="email" className="text-sm font-medium">E-posta</label>
                                             <input type="email" id="email" name="email" placeholder="E-posta adresinizi girin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
                                         </div>
-                                        <div className="space-y-1">
-
-                                            <div className="flex items-center justify-between space-x-2">
-                                                <label htmlFor="password" className="text-sm font-medium">Parola</label>
-                                                <Link href="password" className="text-sm font-medium inline-block text-blue-600 hover:text-blue-400">Şifremi Unuttum</Link>
-                                            </div>
-                                            <input type="password" id="password" name="password" placeholder="Parolanızı girin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
-                                        </div>
                                         <div>
-
                                             <button type="submit" className="w-full inline-flex justify-center items-center space-x-2 border font-semibold rounded-lg px-6 py-3 leading-6 border-blue-700 bg-blue-700 text-white hover:text-white hover:bg-blue-600 hover:border-blue-600 focus:ring focus:ring-blue-400 focus:ring-opacity-50 active:bg-blue-700 active:border-blue-700">
-                                                <svg className="hi-mini hi-arrow-uturn-right inline-block w-5 h-5 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M12.207 2.232a.75.75 0 00.025 1.06l4.146 3.958H6.375a5.375 5.375 0 000 10.75H9.25a.75.75 0 000-1.5H6.375a3.875 3.875 0 010-7.75h10.003l-4.146 3.957a.75.75 0 001.036 1.085l5.5-5.25a.75.75 0 000-1.085l-5.5-5.25a.75.75 0 00-1.06.025z" clipRule="evenodd" /></svg>
-                                                <span>Giriş Yap</span>
+                                                <span>Şifremi Yenile</span>
                                             </button>
                                         </div>
                                     </form>
                                 </div>
                                 <div className="p-5 md:px-16 grow text-sm text-center bg-gray-50">
-                                    <Link href="register" className="font-medium text-blue-600 hover:text-blue-400">Yeni Hesap Oluştur</Link>
+                                    <Link href="/admin/auth/login" className="font-medium text-blue-600 hover:text-blue-400">Giriş Yap</Link>
                                 </div>
                             </div>
                             {/* END Sign In Form */}
