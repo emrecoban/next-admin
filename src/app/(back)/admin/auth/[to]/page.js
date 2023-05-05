@@ -1,3 +1,7 @@
+import LoginPage from "./LoginPage"
+
 export default function Auth({ params }) {
-    return <h1>Şu an buradasın: {JSON.stringify(params.to, 2, null)}</h1>
+    if (params.to === "login") return (<LoginPage />)
+    if (params.to === "register") return (<LoginPage />)
+    if (params.to === "password") return (<LoginPage />)
 }
