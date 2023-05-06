@@ -73,7 +73,7 @@ export default function Logout({ session }) {
                                 <Menu as="div" className="relative inline-block">
                                     {/* Dropdown Toggle Button */}
                                     <Menu.Button className="inline-flex justify-center items-center space-x-2 border font-semibold rounded-lg px-3 py-2 leading-5 text-sm border-gray-200 bg-white text-gray-800 hover:border-gray-300 hover:text-gray-900 hover:shadow-sm focus:ring focus:ring-gray-300 focus:ring-opacity-25 active:border-gray-200 active:shadow-none">
-                                        <span className="flex gap-x-2 items-center"><Image src={session.user.user_metadata.avatar_url} width="20" height="20" alt="avatar" className="rounded-xl" /> {session.user.user_metadata.full_name}</span>
+                                        <span className="flex gap-x-2 items-center"><Image src={session.user?.user_metadata.avatar_url} width="20" height="20" alt="avatar" className="rounded-xl" /> {session.user?.user_metadata.full_name}</span>
                                         <svg className="hi-mini hi-chevron-down inline-block w-5 h-5 opacity-40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" /></svg>
                                     </Menu.Button>
                                     {/* END Dropdown Toggle Button */}

@@ -5,6 +5,12 @@ import Link from "next/link"
 
 export default function RegisterPage() {
     const { supabase } = useSupabase()
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        return;
+    }
+
     return (
         <>
             {/* Pages: Sign In: Boxed */}
@@ -31,7 +37,7 @@ export default function RegisterPage() {
                             {/* Register Form */}
                             <div className="flex flex-col rounded-lg shadow-sm bg-white overflow-hidden">
                                 <div className="p-5 md:px-16 md:py-12 grow">
-                                    <form className="space-y-6">
+                                    <form onSubmit={handleSubmit} className="space-y-6">
                                         <div className="space-y-1">
                                             <label htmlFor="fullName" className="text-sm font-medium">Ad</label>
                                             <input type="text" id="fullName" name="fullName" placeholder="Adınızı girin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
