@@ -3,6 +3,7 @@
 import { useSupabase } from "../../../provider/supabase"
 import Link from "next/link"
 import { useState } from "react"
+import translateError from "../utils/translateError"
 
 export default function LoginPage() {
     const { supabase } = useSupabase()
@@ -11,11 +12,13 @@ export default function LoginPage() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         const { data, error } = await supabase.auth.signInWithPassword({
-            email: "jon@supabase.com2",
+            email: "jon@supabase.com",
             password: "sup3rs3cur3",
+            /*             email: "jon@supabase.com",
+                        password: "sup3rs3cur3", */
         });
 
-        error && setErrText(error.message || "Bilinmeyen bir hata oluştu.")
+        error && setErrText(error || "Bilinmeyen bir hata oluştu.")
     }
     return (
         <>
@@ -48,7 +51,8 @@ export default function LoginPage() {
                                                 <svg className="hi-solid hi-check-circle inline-block w-5 h-5 mr-3 flex-none text-red-500" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm-1.5-5.009c0-.867.659-1.491 1.491-1.491.85 0 1.509.624 1.509 1.491 0 .867-.659 1.509-1.509 1.509-.832 0-1.491-.642-1.491-1.509zM11.172 6a.5.5 0 0 0-.499.522l.306 7a.5.5 0 0 0 .5.478h1.043a.5.5 0 0 0 .5-.478l.305-7a.5.5 0 0 0-.5-.522h-1.655z" /></svg>
                                                 <h3 className="font-semibold">Bir hata oluştu!</h3>
                                             </div>
-                                            <p className="ml-8">Selam selam!</p>
+                                            <p className="ml-8">
+                                                {translateError(errText.message)}</p>
                                         </div>
                                     )}
                                     {/* END Alerts: Error */}
