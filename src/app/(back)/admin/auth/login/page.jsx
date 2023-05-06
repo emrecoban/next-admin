@@ -6,6 +6,7 @@ import { useState } from "react"
 
 export default function LoginPage() {
     const { supabase } = useSupabase()
+    const [errText, setErrText] = useState(false)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -14,15 +15,10 @@ export default function LoginPage() {
             password: "sup3rs3cur3",
         });
 
-        if (error) {
-            s
-            throw new Error(error.message || "Bilinmeyen bir hata oluştu.")
-        }
+        error && setErrText(error.message || "Bilinmeyen bir hata oluştu.")
     }
     return (
         <>
-            {/* Pages: Sign In: Boxed */}
-
             {/* Page Container */}
             <div id="page-container" className="flex flex-col mx-auto w-full min-h-screen min-w-[320px] bg-gray-100">
                 {/* Page Content */}
@@ -45,6 +41,17 @@ export default function LoginPage() {
                             {/* Sign In Form */}
                             <div className="flex flex-col rounded-lg shadow-sm bg-white overflow-hidden">
                                 <div className="p-5 md:px-16 md:py-12 grow">
+                                    {/* Alerts: Error */}
+                                    {errText && (
+                                        <div className="p-4 md:p-5 mb-6 rounded text-red-700 bg-red-100">
+                                            <div className="flex items-center mb-2">
+                                                <svg className="hi-solid hi-check-circle inline-block w-5 h-5 mr-3 flex-none text-red-500" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm-1.5-5.009c0-.867.659-1.491 1.491-1.491.85 0 1.509.624 1.509 1.491 0 .867-.659 1.509-1.509 1.509-.832 0-1.491-.642-1.491-1.509zM11.172 6a.5.5 0 0 0-.499.522l.306 7a.5.5 0 0 0 .5.478h1.043a.5.5 0 0 0 .5-.478l.305-7a.5.5 0 0 0-.5-.522h-1.655z" /></svg>
+                                                <h3 className="font-semibold">Bir hata oluştu!</h3>
+                                            </div>
+                                            <p className="ml-8">Selam selam!</p>
+                                        </div>
+                                    )}
+                                    {/* END Alerts: Error */}
                                     <form onSubmit={handleSubmit} className="space-y-6">
                                         <div className="space-y-1">
                                             <label htmlFor="email" className="text-sm font-medium">E-posta</label>
