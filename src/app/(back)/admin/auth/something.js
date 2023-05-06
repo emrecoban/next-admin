@@ -2,9 +2,9 @@ import { createServerComponentSupabaseClient } from '@supabase/auth-helpers-next
 import { headers, cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
-import LoginPage from "./LoginPage"
-import PasswordPage from "./PasswordPage"
-import RegisterPage from "./RegisterPage"
+import LoginPage from "./login/page"
+import PasswordPage from "./password/page"
+import RegisterPage from "./register/page"
 
 export default async function Auth({ params }) {
     const supabase = createServerComponentSupabaseClient({

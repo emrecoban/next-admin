@@ -2,26 +2,22 @@
 
 import { useSupabase } from "../../../provider/supabase"
 import Link from "next/link"
-//import { useRouter } from 'next/router';
+import { useState } from "react"
 
 export default function LoginPage() {
     const { supabase } = useSupabase()
-    //const router = useRouter();
 
     const handleSubmit = async (e) => {
         e.preventDefault()
         const { data, error } = await supabase.auth.signInWithPassword({
-            email: "jon@supabase.com",
+            email: "jon@supabase.com2",
             password: "sup3rs3cur3",
         });
-        console.log("hata var=>", error)
-        //!error && router.push('/admin')
-        /*         await supabase.auth.signInWithOAuth({
-                    provider: "github",
-                    options: {
-                        redirectTo: 'http://localhost:3000/admin'
-                    }
-                }) */
+
+        if (error) {
+            s
+            throw new Error(error.message || "Bilinmeyen bir hata oluştu.")
+        }
     }
     return (
         <>
