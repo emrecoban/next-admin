@@ -7,3 +7,7 @@ export async function middleware(req) {
     await supabase.auth.getSession()
     return res
 }
+
+export const config = {
+    matcher: '/admin/:path*',
+};
