@@ -77,7 +77,6 @@ export default function RegisterPage() {
 
     return (
         <>
-
             {/* Alerts: Error */}
             {errText && (
                 <div className="p-4 md:p-5 mb-6 rounded text-red-700 bg-red-100">

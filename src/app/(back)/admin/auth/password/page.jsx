@@ -7,7 +7,6 @@ export default function PasswordPage() {
     const { supabase } = useSupabase()
     return (
         <>
-
             <form className="space-y-6">
                 <div className="space-y-1">
                     <label htmlFor="email" className="text-sm font-medium">E-posta</label>
