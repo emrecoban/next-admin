@@ -60,12 +60,8 @@ export default function RegisterPage() {
 
         data.user && data.user.identities && data.user.identities.length === 0 && setErrText("Bu e-posta adresi kullanılıyor")
         error && setErrText(error || "Bilinmeyen bir hata oluştu.")
-        console.log("VERİLER error=> ", error)
-        console.log("VERİLER data=> ", data.user.identities.length)
-        if (!error && data.user.identities.length != 0) {
-            console.log("IF ÇALIŞTI!")
-            router.push('/admin/auth/login?from=register')
-        }
+
+            (!error && data.user.identities.length != 0) && router.push('/admin/auth/login?from=register')
     }
 
     const handleInput = (e) => {
