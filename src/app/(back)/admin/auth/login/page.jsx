@@ -14,7 +14,7 @@ export default function LoginPage() {
 
     const formSchema = object({
         email: string().email("Geçersiz e-posta adresi").required("E-posta adresi gerekli"),
-        password: string().min(8).required(),
+        password: string().min(8).max(32).required(),
     })
 
     useEffect(() => {
