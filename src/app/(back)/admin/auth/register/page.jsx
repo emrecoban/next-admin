@@ -3,10 +3,12 @@
 import { useSupabase } from "../../../provider/supabase"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { useRouter } from 'next/navigation'
 import translateError from "../utils/translateError"
 import * as Yup from 'yup';
 
 export default function RegisterPage() {
+    const router = useRouter()
     const { supabase } = useSupabase()
     const [errText, setErrText] = useState(false)
     const [submit, setSubmit] = useState(true)
@@ -58,9 +60,12 @@ export default function RegisterPage() {
 
         data.user && data.user.identities && data.user.identities.length === 0 && setErrText("Bu e-posta adresi kullanılıyor")
         error && setErrText(error || "Bilinmeyen bir hata oluştu.")
-
-        console.log("gelen veri=> ", data)
-
+        console.log("VERİLER error=> ", error)
+        console.log("VERİLER data=> ", data.user.identities.length)
+        if (!error && data.user.identities.length != 0) {
+            console.log("IF ÇALIŞTI!")
+            router.push('/admin/auth/login?from=register')
+        }
     }
 
     const handleInput = (e) => {
