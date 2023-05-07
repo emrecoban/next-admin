@@ -7,7 +7,7 @@ export default function redirectAlert(where) {
     if (where === "register") {
         alert.title = "Kayıt işlemi başarılı!"
         alert.message = "Hesabınızı doğrulamak için lütfen e-posta adresinize gelen bağlantıya tıklayın."
-    } else if (where === "forgot") {
+    } else if (where === "password") {
         alert.title = "Sıfırlama e-postası gönderildi!"
         alert.message = "E-posta adresinize gelen şifre sıfırlama bağlantısına tıklayın."
     }
