@@ -4,6 +4,7 @@ import { useSupabase } from "../../../provider/supabase"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import translateError from "../utils/translateError"
+import { object, string } from 'yup';
 
 export default function LoginPage() {
     const { supabase } = useSupabase()
@@ -11,13 +12,24 @@ export default function LoginPage() {
     const [submit, setSubmit] = useState(true)
     const [form, setForm] = useState({ email: "", password: "" })
 
+    const formSchema = object({
+        email: string().email("Geçersiz e-posta adresi").required("E-posta adresi gerekli"),
+        password: string().min(8).required(),
+    })
+
     useEffect(() => {
-        if (form.email && form.password) {
-            setSubmit(false)
-        } else {
-            setSubmit(true)
-        }
-    }, [form])
+        (async () => {
+            const isValid = await formSchema.isValid({
+                email: form.email,
+                password: form.password,
+            })
+            if (isValid) {
+                setSubmit(false)
+            } else {
+                setSubmit(true)
+            }
+        })()
+    }, [form, formSchema])
 
 
     const handleSubmit = async (e) => {
