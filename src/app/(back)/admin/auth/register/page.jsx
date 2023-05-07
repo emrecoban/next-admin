@@ -12,6 +12,7 @@ export default function RegisterPage() {
     const { supabase } = useSupabase()
     const [errText, setErrText] = useState(false)
     const [submit, setSubmit] = useState(true)
+    const [spinner, setSpinner] = useState(false)
     const [form, setForm] = useState({
         fullName: "",
         email: "",
@@ -61,7 +62,9 @@ export default function RegisterPage() {
         data.user && data.user.identities && data.user.identities.length === 0 && setErrText("Bu e-posta adresi kullanılıyor")
         error && setErrText(error || "Bilinmeyen bir hata oluştu.")
 
-            (!error && data.user.identities.length != 0) && router.push('/admin/auth/login?from=register')
+        if (!error && data.user.identities.length != 0) {
+            router.push('/admin/auth/login?from=register')
+        }
     }
 
     const handleInput = (e) => {
@@ -74,8 +77,6 @@ export default function RegisterPage() {
 
     return (
         <>
-            {/* Pages: Sign In: Boxed */}
-
             {/* Page Container */}
             <div id="page-container" className="flex flex-col mx-auto w-full min-h-screen min-w-[320px] bg-gray-100">
                 {/* Page Content */}
@@ -167,19 +168,6 @@ export default function RegisterPage() {
                 {/* END Page Content */}
             </div>
             {/* END Page Container */}
-
-            {/* END Pages: Sign In: Boxed */}
         </>
     )
 }
-
-{/* <div className="h-screen flex justify-center items-center">
-    <button className="bg-black text-white px-8 py-3 rounded-md hover:drop-shadow-2xl" onClick={() => supabase.auth.signInWithOAuth({
-        provider: "github",
-        options: {
-            redirectTo: 'http://localhost:3000/admin'
-        }
-    })}>
-        Login with GitHub
-    </button>
-</div> */}
