@@ -7,9 +7,9 @@ export default async function AuthLayout({ children }) {
         headers,
         cookies,
     })
-    const { data: userData } = await supabase.auth.getSession()
+    const { data } = await supabase.auth.getSession()
 
-    if (userData.session) {
+    if (data.session) {
         redirect('/admin')
     }
 

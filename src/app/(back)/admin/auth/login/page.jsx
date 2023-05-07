@@ -2,17 +2,29 @@
 
 import { useSupabase } from "../../../provider/supabase"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import translateError from "../utils/translateError"
 
 export default function LoginPage() {
     const { supabase } = useSupabase()
     const [errText, setErrText] = useState(false)
+    const [submit, setSubmit] = useState(true)
+    const [form, setForm] = useState({ email: "", password: "" })
+
+    useEffect(() => {
+        if (form.email && form.password) {
+            setSubmit(false)
+        } else {
+            setSubmit(true)
+        }
+    }, [form])
+
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+
         const { data, error } = await supabase.auth.signInWithPassword({
-            email: "jon@supabase.com",
+            email: "jon@supabase.com,",
             password: "sup3rs3cur3",
             /*             email: "jon@supabase.com",
                         password: "sup3rs3cur3", */
@@ -20,6 +32,15 @@ export default function LoginPage() {
 
         error && setErrText(error || "Bilinmeyen bir hata oluştu.")
     }
+
+    const handleInput = (e) => {
+        const { name, value } = e.target
+        setForm(prevData => ({
+            ...prevData,
+            [name]: value,
+        }))
+    }
+
     return (
         <>
             {/* Page Container */}
@@ -59,7 +80,10 @@ export default function LoginPage() {
                                     <form onSubmit={handleSubmit} className="space-y-6">
                                         <div className="space-y-1">
                                             <label htmlFor="email" className="text-sm font-medium">E-posta</label>
-                                            <input type="email" id="email" name="email" placeholder="E-posta adresinizi girin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+                                            <input type="email" id="email" name="email" autoComplete="off" placeholder="E-posta adresinizi girin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                                                onChange={(e) => handleInput(e)}
+                                                value={form.email}
+                                            />
                                         </div>
                                         <div className="space-y-1">
 
@@ -67,11 +91,15 @@ export default function LoginPage() {
                                                 <label htmlFor="password" className="text-sm font-medium">Parola</label>
                                                 <Link href="/admin/auth/password" className="text-sm font-medium inline-block text-blue-600 hover:text-blue-400">Şifremi Unuttum</Link>
                                             </div>
-                                            <input type="password" id="password" name="password" placeholder="Parolanızı girin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50" />
+                                            <input type="password" id="password" name="password" placeholder="Parolanızı girin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+                                                onChange={(e) => handleInput(e)}
+                                                value={form.password}
+                                            />
                                         </div>
                                         <div>
 
-                                            <button type="submit" className="w-full inline-flex justify-center items-center space-x-2 border font-semibold rounded-lg px-6 py-3 leading-6 border-blue-700 bg-blue-700 text-white hover:text-white hover:bg-blue-600 hover:border-blue-600 focus:ring focus:ring-blue-400 focus:ring-opacity-50 active:bg-blue-700 active:border-blue-700">
+                                            <button type="submit" className="w-full inline-flex justify-center items-center space-x-2 border font-semibold rounded-lg px-6 py-3 leading-6 border-blue-700 bg-blue-700 text-white hover:text-white hover:bg-blue-600 hover:border-blue-600 focus:ring focus:ring-blue-400 focus:ring-opacity-50 active:bg-blue-700 active:border-blue-700 disabled:bg-gray-400 disabled:border-gray-300"
+                                                disabled={submit}>
                                                 <svg className="hi-mini hi-arrow-uturn-right inline-block w-5 h-5 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fillRule="evenodd" d="M12.207 2.232a.75.75 0 00.025 1.06l4.146 3.958H6.375a5.375 5.375 0 000 10.75H9.25a.75.75 0 000-1.5H6.375a3.875 3.875 0 010-7.75h10.003l-4.146 3.957a.75.75 0 001.036 1.085l5.5-5.25a.75.75 0 000-1.085l-5.5-5.25a.75.75 0 00-1.06.025z" clipRule="evenodd" /></svg>
                                                 <span>Giriş Yap</span>
                                             </button>
