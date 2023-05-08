@@ -10,7 +10,7 @@ export default function Logout({ session }) {
     const { supabase } = useSupabase()
     const [userDropdownOpen, setUserDropdownOpen] = useState(false)
     const [mobileNavMenu, setMobileNavMenu] = useState(false)
-    console.log("gelen veri => ", session)
+    console.log("gelen veri (dashboard.jsx)=> ", session)
     //commit 2 May 4
     return (
         <>

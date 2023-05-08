@@ -8,9 +8,9 @@ export default async function Admin() {
         headers,
         cookies,
     })
-    const { data: userData } = await supabase.auth.getSession();
-    if (userData.session) {
-        return (<Dashboard session={userData.session} />)
+    const { data } = await supabase.auth.getSession();
+    if (data.session) {
+        return (<Dashboard session={data.session} />)
     }
     return redirect('/admin/auth/login')
 }

@@ -37,7 +37,7 @@ export default function PasswordPage() {
         e.preventDefault()
         setSpinner(true)
         const { error } = await supabase.auth.resetPasswordForEmail(email, {
-            redirectTo: 'http://localhost:3000/admin/auth/login?from=password'
+            redirectTo: 'http://localhost:3000/admin/auth/reset'
         })
 
         if (error) {

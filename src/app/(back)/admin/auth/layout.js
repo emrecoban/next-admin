@@ -3,7 +3,6 @@ import { headers, cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 
 export default async function AuthLayout({ children }) {
-    const route = children.props.childProp.segment
     const supabase = createServerComponentSupabaseClient({
         headers,
         cookies,

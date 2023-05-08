@@ -13,8 +13,17 @@ export default function SupabaseProvider({ children }) {
     useEffect(() => {
         const {
             data: { subscription },
-        } = supabase.auth.onAuthStateChange(() => {
-            router.refresh()
+        } = supabase.auth.onAuthStateChange((event, session) => {
+            if (event === 'PASSWORD_RECOVERY') {
+                router.push('/admin/auth/reset');
+            }
+            if (session && (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED')) {
+                router.refresh()
+            }
+            if (event === 'SIGNED_OUT') {
+                router.refresh()
+            }
+
         })
 
         return () => {
