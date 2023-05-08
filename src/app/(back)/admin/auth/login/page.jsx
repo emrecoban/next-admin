@@ -7,7 +7,7 @@ import { useEffect, useState } from "react"
 import translateError from "../utils/translateError"
 import redirectAlert from "../utils/redirectAlert"
 import Loading from "../components/Loading"
-import { object, string } from 'yup';
+import { object, string } from 'yup'
 
 export default function LoginPage() {
     const fromWhere = useSearchParams().get('from')
