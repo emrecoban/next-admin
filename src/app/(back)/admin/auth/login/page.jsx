@@ -41,11 +41,9 @@ export default function LoginPage() {
         e.preventDefault()
         setSpinner(true)
 
-        const { data, error } = await supabase.auth.signInWithPassword({
-            email: "jon@supabase.com,",
-            password: "sup3rs3cur3",
-            /*             email: "jon@supabase.com",
-                        password: "sup3rs3cur3", */
+        const { error } = await supabase.auth.signInWithPassword({
+            email: form.email,
+            password: form.password,
         });
 
         if (error) {
