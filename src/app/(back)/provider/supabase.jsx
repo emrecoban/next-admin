@@ -14,12 +14,16 @@ export default function SupabaseProvider({ children }) {
         const {
             data: { subscription },
         } = supabase.auth.onAuthStateChange((event, session) => {
+            console.log("EVENT (provider) => ", event)
+
             if (event === 'PASSWORD_RECOVERY') {
-                router.push('/admin/auth/reset');
+                router.push('/admin/auth/reset')
             }
-            if (session && (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') && event != 'INITIAL_SESSION') {
+
+            if (session && (event === 'SIGNED_IN' || event == 'TOKEN_REFRESHED')) {
                 router.refresh()
             }
+
             if (event === 'SIGNED_OUT') {
                 router.refresh()
             }
