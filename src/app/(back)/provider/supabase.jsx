@@ -17,7 +17,7 @@ export default function SupabaseProvider({ children }) {
             if (event === 'PASSWORD_RECOVERY') {
                 router.push('/admin/auth/reset');
             }
-            if (session && (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED')) {
+            if (session && (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') && event != 'INITIAL_SESSION') {
                 router.refresh()
             }
             if (event === 'SIGNED_OUT') {

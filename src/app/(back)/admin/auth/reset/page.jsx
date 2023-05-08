@@ -40,8 +40,7 @@ export default function ResetPage() {
 
     useEffect(() => {
         supabase.auth.onAuthStateChange(async (event, session) => {
-            console.log("EVENT (reset.jsx) => ", event)
-            console.log("SESSION (reset.jsx) => ", session) // yoksa null
+            // burada problem var. eğer yeni parola formunda sayfayı yenilerse otomatik giriş yapıyor. session olduğu için. event ve session kontrol et.
             if (event != 'PASSWORD_RECOVERY') {
                 router.push('/admin/auth/login')
             } else {
@@ -54,13 +53,9 @@ export default function ResetPage() {
         e.preventDefault()
         setSpinner(true)
         supabase.auth.onAuthStateChange(async (event, session) => {
-            console.log("gelen event => ", event)
             if (event == 'PASSWORD_RECOVERY' || event == 'INITIAL_SESSION') {
                 const { data, error } = await supabase.auth
                     .updateUser({ password: form.password })
-
-                console.log("gelen data => ", data)
-                console.log("gelen error => ", error)
                 if (data) router.push('/admin/auth/login?from=reset')
                 if (error) {
                     setErrText(error || "Bilinmeyen bir hata oluştu.")
