@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from "react"
 import translateError from "../utils/translateError"
 import redirectAlert from "../utils/redirectAlert"
+import Loading from "../components/Loading"
 import { object, string } from 'yup';
 
 export default function LoginPage() {
@@ -13,6 +14,7 @@ export default function LoginPage() {
     const { supabase } = useSupabase()
     const [errText, setErrText] = useState(false)
     const [submit, setSubmit] = useState(true)
+    const [spinner, setSpinner] = useState(false)
     const [form, setForm] = useState({ email: "", password: "" })
 
     const formSchema = object({
