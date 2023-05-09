@@ -36,6 +36,7 @@ export default function LoginPage() {
         })()
     }, [form, formSchema])
 
+    useEffect(() => fromWhere == "mail" && setSpinner(true), [fromWhere])
 
     const handleSubmit = async (e) => {
         e.preventDefault()

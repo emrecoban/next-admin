@@ -55,7 +55,8 @@ export default function RegisterPage() {
                 email: form.email,
                 password: form.password,
                 options: {
-                    data: { full_name: form.fullName }
+                    data: { full_name: form.fullName },
+                    emailRedirectTo: 'http://localhost:3000/admin/auth/login?from=mail',
                 }
             }
         )
