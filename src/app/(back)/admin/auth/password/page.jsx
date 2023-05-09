@@ -8,7 +8,8 @@ import translateError from "../utils/translateError"
 import Loading from "../components/Loading"
 import { object, string } from 'yup'
 
-export default function PasswordPage() {
+
+export default async function PasswordPage() {
     const router = useRouter()
     const { supabase } = useSupabase()
     const [errText, setErrText] = useState(false)
