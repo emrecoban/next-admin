@@ -2,15 +2,14 @@
 
 import { useSupabase } from "../../../provider/supabase"
 import Link from "next/link"
-import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from "react"
 import translateError from "../utils/translateError"
 import redirectAlert from "../utils/redirectAlert"
 import Loading from "../components/Loading"
 import { object, string } from 'yup'
 
-export default function LoginPage() {
-    const fromWhere = useSearchParams().get('from')
+export default function LoginPage({ searchParams }) {
+    const { from: fromWhere } = searchParams
     const { supabase } = useSupabase()
     const [errText, setErrText] = useState(false)
     const [submit, setSubmit] = useState(true)

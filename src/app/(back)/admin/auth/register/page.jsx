@@ -123,7 +123,7 @@ export default function RegisterPage() {
                                         value={form.email} />
                                 </div>
                                 <div className="space-y-1">
-                                    <label htmlFor="password" className="text-sm font-medium">Parola</label>
+                                    <label htmlFor="password" className="text-sm font-medium">Parola <span className="text-xs font-normal text-gray-700">(En az 8 karakter olmalı)</span></label>
                                     <input type="password" id="password" name="password" placeholder="Bir parola belirleyin" className="w-full block border placeholder-gray-500 px-5 py-3 leading-6 rounded-lg border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
                                         onChange={(e) => handleInput(e)}
                                         value={form.password} />
