@@ -27,7 +27,7 @@ export default function Logout({ session }) {
                             <div className="flex items-center">
                                 {/* Logo */}
                                 <a
-                                    href="javascript:void(0)"
+
                                     className="text-md group inline-flex items-center space-x-1 font-bold tracking-wide text-slate-700 hover:text-blue-600 active:text-slate-700 sm:text-lg"
                                 >
                                     <svg
@@ -51,7 +51,7 @@ export default function Logout({ session }) {
                                 {/* Header Navigation */}
                                 <nav className="flex items-center space-x-2">
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-slate-900 hover:bg-indigo-100 hover:text-indigo-600 active:border-indigo-200 active:bg-indigo-100 sm:space-x-2"
                                     >
                                         <svg
@@ -187,7 +187,7 @@ export default function Logout({ session }) {
                         >
                             <nav className="flex flex-col py-4 lg:hidden">
                                 <a
-                                    href="javascript:void(0)"
+
                                     className="group flex items-center justify-between space-x-2 rounded-md border border-blue-50 bg-blue-100 px-2.5 py-2 text-sm font-semibold text-blue-600 active:border-indigo-200"
                                 >
                                     <svg
@@ -203,7 +203,7 @@ export default function Logout({ session }) {
                                 <hr className="h-5 border-0" />
                                 <div className="space-y-1.5">
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
@@ -225,7 +225,7 @@ export default function Logout({ session }) {
                                         </span>
                                     </a>
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
@@ -243,7 +243,7 @@ export default function Logout({ session }) {
                                 <hr className="h-5 border-0" />
                                 <div className="space-y-1.5">
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
@@ -261,7 +261,7 @@ export default function Logout({ session }) {
                                         </span>
                                     </a>
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
@@ -284,7 +284,7 @@ export default function Logout({ session }) {
                                         </span>
                                     </a>
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
@@ -319,7 +319,7 @@ export default function Logout({ session }) {
                             {/* Desktop Navigation */}
                             <nav className="hidden lg:col-span-3 lg:block">
                                 <a
-                                    href="javascript:void(0)"
+
                                     className="group flex items-center justify-between space-x-2 rounded-md border border-blue-100 bg-blue-50 px-2.5 py-2 text-sm font-semibold text-blue-600 active:border-indigo-200"
                                 >
                                     <svg
@@ -335,7 +335,7 @@ export default function Logout({ session }) {
                                 <hr className="h-5 border-0" />
                                 <div className="space-y-1.5">
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
@@ -357,7 +357,7 @@ export default function Logout({ session }) {
                                         </span>
                                     </a>
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
@@ -373,7 +373,7 @@ export default function Logout({ session }) {
                                         <span className="grow">Araştırmacılar</span>
                                     </a>
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
@@ -394,7 +394,7 @@ export default function Logout({ session }) {
                                 <hr className="h-5 border-0" />
                                 <div className="space-y-1.5">
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
@@ -412,7 +412,7 @@ export default function Logout({ session }) {
                                         </span>
                                     </a>
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
@@ -435,7 +435,7 @@ export default function Logout({ session }) {
                                         </span>
                                     </a>
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
@@ -460,7 +460,7 @@ export default function Logout({ session }) {
                                 <hr className="h-5 border-0" />
                                 <div className="space-y-1.5">
                                     <a
-                                        href="javascript:void(0)"
+
                                         className="group flex items-center justify-between space-x-2 rounded-md border border-transparent px-2.5 py-2 text-sm font-semibold text-gray-800 hover:text-blue-600 hover:bg-blue-100 active:border-blue-100"
                                     >
                                         <svg
@@ -609,7 +609,7 @@ export default function Logout({ session }) {
                                                             <td className="p-3 text-left">
                                                                 <a
                                                                     className="font-medium text-indigo-500 hover:text-indigo-700"
-                                                                    href="javascript:void(0)"
+
                                                                 >
                                                                     order_0006578
                                                                 </a>
@@ -630,7 +630,7 @@ export default function Logout({ session }) {
                                                             <td className="p-3 text-left">
                                                                 <a
                                                                     className="font-medium text-indigo-500 hover:text-indigo-700"
-                                                                    href="javascript:void(0)"
+
                                                                 >
                                                                     order_0006577
                                                                 </a>
@@ -651,7 +651,7 @@ export default function Logout({ session }) {
                                                             <td className="p-3 text-left">
                                                                 <a
                                                                     className="font-medium text-indigo-500 hover:text-indigo-700"
-                                                                    href="javascript:void(0)"
+
                                                                 >
                                                                     order_0006576
                                                                 </a>
@@ -672,7 +672,7 @@ export default function Logout({ session }) {
                                                             <td className="p-3 text-left">
                                                                 <a
                                                                     className="font-medium text-indigo-500 hover:text-indigo-700"
-                                                                    href="javascript:void(0)"
+
                                                                 >
                                                                     order_0006575
                                                                 </a>
@@ -693,7 +693,7 @@ export default function Logout({ session }) {
                                                             <td className="p-3 text-left">
                                                                 <a
                                                                     className="font-medium text-indigo-500 hover:text-indigo-700"
-                                                                    href="javascript:void(0)"
+
                                                                 >
                                                                     order_0006574
                                                                 </a>
@@ -714,7 +714,7 @@ export default function Logout({ session }) {
                                                             <td className="p-3 text-left">
                                                                 <a
                                                                     className="font-medium text-indigo-500 hover:text-indigo-700"
-                                                                    href="javascript:void(0)"
+
                                                                 >
                                                                     order_0006573
                                                                 </a>
